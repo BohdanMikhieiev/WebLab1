@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-wrap: break-word;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+div {
+    line-height: 23px;
+}
+
+.grid-container {
+    grid-area: item2;
+    display: grid;
+    grid-template-areas:
+            "cell1 cell2 cell2"
+            "cell1 cell3 cell4"
+            "cell1 cell5 cell4";
+
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 15% 70% 15%;
+    flex-grow: 1;
+}
+
+.cell1, .cell2, .cell3, .cell4, .cell5 {
+    padding: 20px;
+}
+
+.cell1 {
+    grid-area: cell1;
+    background-color: lightpink;
+}
+
+.cell2 {
+    grid-area: cell2;
+    background-color: darkseagreen;
+}
+
+.cell3 {
+    grid-area: cell3;
+    background-color: white;
+    padding: 0;
+}
+
+.cell4 {
+    grid-area: cell4;
+    background-color: lightpink;
+}
+
+.cell5 {
+    grid-area: cell5;
+    background-color: darkseagreen;
+}
+
+.header, .footer {
+    background-color: lightskyblue;
+    display: flex;
+    height: 80px;
+    padding: 10px;
+}
+
+header {
+    justify-content: left;
+}
+
+footer {
+    justify-content: right;
+}
+
+.x, .y {
+    background-color: white;
+    width: max-content;
+    display: flex;
+    align-items: center;
+}
+
+.x {
+    justify-content: center;
+    padding: 10px;
+
+}
+
+.y {
+    justify-content: left;
+    padding: 10px 20px 10px 0;
+}
+
+.background-img {
+    width: 100%;
+    height: 100%;
+}
